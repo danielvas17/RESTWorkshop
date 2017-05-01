@@ -39,19 +39,17 @@ public class HelloWorldsResource {
     public String getJson() {
         //TODO return proper representation object
         //throw new UnsupportedOperationException();
-        HelloWorldResource resource = HelloWorldResource.getInstance("careverga");
-        System.out.println("pase por aqui 2");
+        HelloWorldResource resource = HelloWorldResource.getInstance("Hello World!");
         return resource.getJson();
     }
 
     /**
      * Sub-resource locator method for {name}
      */
-    @Path("/tetas/{name}")
+    @Path("{name}")
     //@Path("/helloworld")
     public DefaultResouce getHelloWorldResource(@PathParam("name") String name) {
     //public HelloWorldResource getHelloWorldResource() {
-        System.out.println("pase por aqui");
         //return HelloWorldResource.getInstance(name);
         switch (name) {
             case "xxx":
